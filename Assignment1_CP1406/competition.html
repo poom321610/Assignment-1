@@ -1,0 +1,571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Competition</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+h2 {
+	font-family: Gaban;
+	font-size: 36px;
+	color: #33C;
+	background-color: #FFF;
+}
+</style>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+h2 {
+	font-family: Gaban;
+	font-size: 36px;
+	color: #33C;
+	background-color: #FFF;
+}
+
+/* ~~this fixed width container surrounds the other divs~~ */
+.container {
+	width: 960px;
+	background-color: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background-color: #ADB96E;
+}
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 164px;
+	background-color: #FFFFFF;
+	padding-bottom: 10px;
+	height: auto;
+}
+.content {
+	padding: 10px 0;
+	width: 795px;
+	float: left;
+	font-family: "Comic Sans MS", cursive;
+	font-size: 20px;
+}
+h1 {
+	font-family: Gaban;
+	font-size: 50px;
+	background-color: #FC3;
+	color: #33C;
+	margin-right: 3%;
+	margin-left: 3%;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+.Logo {
+	float: left;
+	position: fixed;
+	z-index: 20;
+	left: 0px;
+	top: 200px;
+	border: thin dotted #FFF;
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background-color: #C6D580;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	color: #FFF;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #CCC49F;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	font-family: "Comic Sans MS", cursive;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+	background-image: url(Images/sand.jpg);
+}
+#Firstimg {
+	margin: 10%;
+}
+
+#BG {
+	width: 100%;
+	position: fixed;
+	z-index: -100;
+	height: auto;
+	left: 0px;
+	top: 0px;
+	min-width: 500px;
+	min-height: 100%;
+}
+-->
+</style>
+<link href="SpryAssets/SpryMenuBarVertical.css" rel="stylesheet" type="text/css" />
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header"><a href="#"><img src="Images/sand.jpg" alt="Insert Logo Here" name="Logo" width="963" height="147" id="Logo" style="background-color: #C6D580; display:block;" /></a>
+    <table width="181" height="122" border="1" align="center" class="Logo">
+      <tr>
+        <th id="Logo2" scope="col"><a href="signup.html"><img src="Images/ball2.png" width="143" height="139" /></a></th>
+      </tr>
+    </table>
+  <a href="#"><a href="#"></a><img src="Images/BG.jpg" name="BG" width="2272" height="1704" id="BG" /><a href="#"></a><!-- end .header --></div>
+  <div class="sidebar1">
+    <ul id="MenuBar1" class="MenuBarVertical">
+      <li>
+        <div align="center"><a href="index.html">Home</a> </div>
+      </li>
+      <li>
+        <div align="center"><a href="game%20info.html">Game info</a></div>
+      </li>
+      <li>
+        <div align="center"><a href="news.html">News</a></div>
+      </li>
+      <li>
+        <div align="center"><a href="competition.html">Competition</a></div>
+      </li>
+      <li>
+        <div align="center"><a href="supports.html">Supports</a></div>
+      </li>
+      <li>
+        <div align="center"><a href="contactus.html">Contact us</a></div>
+      </li>
+    </ul>
+
+  </div>
+  <div class="content">
+    <h1 align="center">DIGGER'S BEACH VOLLEYBALL</h1>
+    <hr align="center" width="75%" size="6" noshade="noshade" />
+    <!-- InstanceBeginEditable name="EditRegion3" -->
+    <h2>Competition</h2>
+    <table width="750" border="0" align="center" cellpadding="0" cellspacing="0">
+      <col width="63" span="2" />
+      <col width="149" />
+      <col width="63" span="5" />
+      <col width="82" />
+      <col width="63" span="3" />
+      <tr>
+        <td width="63"><p>Pos</p></td>
+        <td width="63"><p>Team</p></td>
+        <td width="149"><p>Played</p></td>
+        <td width="63"><p>Wins</p></td>
+        <td width="63"><p>Losses</p></td>
+        <td width="63"><p>Draws</p></td>
+        <td width="63"><p>For Pts</p></td>
+        <td width="63"><p>Against Pt</p></td>
+        <td width="82"><p>Points</p></td>
+
+      </tr>
+      <tr>
+        <td align="right"><p>1</p></td>
+        <td><p><a name="RANGE!B2" id="RANGE!B2">Beachies</a></p></td>
+        <td align="right"><p>13</p></td>
+        <td align="right"><p>13</p></td>
+        <td align="right"><p>0</p></td>
+        <td align="right"><p>0</p></td>
+        <td align="right"><p>651</p></td>
+        <td align="right"><p>312</p></td>
+        <td align="right"><p>189</p></td>
+      </tr>
+      <tr>
+        <td align="right"><p>2</p></td>
+        <td><p><a name="RANGE!B3" id="RANGE!B3">Wardsand</a></p></td>
+        <td align="right"><p>13</p></td>
+        <td align="right"><p>10</p></td>
+        <td align="right"><p>2</p></td>
+        <td align="right"><p>1</p></td>
+        <td align="right"><p>541</p></td>
+        <td align="right"><p>443</p></td>
+        <td align="right"><p>169</p></td>
+
+      </tr>
+      <tr>
+        <td align="right"><p>3</p></td>
+        <td><p><a name="RANGE!B4" id="RANGE!B4">Flashmann</a></p></td>
+        <td align="right"><p>14</p></td>
+        <td align="right"><p>8</p></td>
+        <td align="right"><p>5</p></td>
+        <td align="right"><p>1</p></td>
+        <td align="right"><p>559</p></td>
+        <td align="right"><p>552</p></td>
+        <td align="right"><p>167</p></td>
+
+      </tr>
+      <tr>
+        <td align="right"><p>4</p></td>
+        <td><p><a name="RANGE!B5" id="RANGE!B5">Googlers</a></p></td>
+        <td align="right"><p>14</p></td>
+        <td align="right"><p>7</p></td>
+        <td align="right"><p>6</p></td>
+        <td align="right"><p>1</p></td>
+        <td align="right"><p>558</p></td>
+        <td align="right"><p>485</p></td>
+        <td align="right"><p>163</p></td>
+
+      </tr>
+      <tr>
+        <td align="right"><p>5</p></td>
+        <td><p><a name="RANGE!B6" id="RANGE!B6">Kumeras</a></p></td>
+        <td align="right"><p>14</p></td>
+        <td align="right"><p>8</p></td>
+        <td align="right"><p>6</p></td>
+        <td align="right"><p>0</p></td>
+        <td align="right"><p>528</p></td>
+        <td align="right"><p>517</p></td>
+        <td align="right"><p>162</p></td>
+  
+      </tr>
+      <tr>
+        <td align="right"><p>6</p></td>
+        <td><p><a name="RANGE!B7" id="RANGE!B7">Spikers</a></p></td>
+        <td align="right"><p>14</p></td>
+        <td align="right"><p>4</p></td>
+        <td align="right"><p>9</p></td>
+        <td align="right"><p>1</p></td>
+        <td align="right"><p>488</p></td>
+        <td align="right"><p>588</p></td>
+        <td align="right"><p>146</p></td>
+ 
+      </tr>
+      <tr>
+        <td align="right"><p>7</p></td>
+        <td><p><a name="RANGE!B8" id="RANGE!B8">Pikers</a></p></td>
+        <td align="right"><p>13</p></td>
+        <td align="right"><p>4</p></td>
+        <td align="right"><p>7</p></td>
+        <td align="right"><p>0</p></td>
+        <td align="right"><p>495</p></td>
+        <td align="right"><p>518</p></td>
+        <td align="right"><p>145</p></td>
+      
+      </tr>
+      <tr>
+        <td align="right"><p>8</p></td>
+        <td><p><a name="RANGE!B9" id="RANGE!B9">Kimkhis</a></p></td>
+        <td align="right"><p>14</p></td>
+        <td align="right"><p>3</p></td>
+        <td align="right"><p>11</p></td>
+        <td align="right"><p>0</p></td>
+        <td align="right"><p>537</p></td>
+        <td align="right"><p>623</p></td>
+        <td align="right"><p>139</p></td>
+     
+      </tr>
+      <tr>
+        <td align="right"><p>9</p></td>
+        <td><p><a name="RANGE!B10" id="RANGE!B10">Setties</a></p></td>
+        <td align="right"><p>12</p></td>
+        <td align="right"><p>6</p></td>
+        <td align="right"><p>6</p></td>
+        <td align="right"><p>0</p></td>
+        <td align="right"><p>460</p></td>
+        <td align="right"><p>484</p></td>
+        <td align="right"><p>137</p></td>
+     
+      </tr>
+      <tr>
+        <td align="right"><p>10</p></td>
+        <td><p><a name="RANGE!B11" id="RANGE!B11">Side Out</a></p></td>
+        <td align="right"><p>12</p></td>
+        <td align="right"><p>3</p></td>
+        <td align="right"><p>9</p></td>
+        <td align="right"><p>0</p></td>
+        <td align="right"><p>454</p></td>
+        <td align="right"><p>451</p></td>
+        <td align="right"><p>136</p></td>
+    
+ 
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <!-- InstanceEndEditable -->
+    <h2><!-- InstanceBeginEditable name="EditRegion4" --><img src="Images/girls_game.jpg" name="Firstimg" width="600" height="446" id="Firstimg" /><!-- InstanceEndEditable --></h2>
+  <!-- end .content --></div>
+  <div class="footer">
+    <p>Copyright&copy;Digger's Beach VolleyBall</p>
+  <!-- end .footer --></div>
+<!-- end .container --></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgRight:"../SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+</body>
+<!-- InstanceEnd --></html>
